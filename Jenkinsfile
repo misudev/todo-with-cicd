@@ -27,7 +27,7 @@ pipeline {
                         credentialsId: "$SOURCECODE_JENKINS_CREDENTIAL_ID"
                 }
                 */
-                git url: 'https://github.com/inspirit941/todo-with-cicd.git', branch: 'master', credentialsId: 'credentials'
+                sh "git url: 'https://github.com/inspirit941/todo-with-cicd.git', branch: 'master', credentialsId: 'credentials'"
                 
                 sh "ls -al"
                 echo 'clone end~~~'
