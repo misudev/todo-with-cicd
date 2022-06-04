@@ -2,12 +2,12 @@ credential:
   usernamePassword:
     password: secret
     scope: GLOBAL
-    id: credentialId1
+    id: credentials
     username: user1
 scm:
   git:
     userRemoteConfigs:
-    - url: https://github.com/jenkinsci/jenkinsfile-runner.git
+    - url: https://github.com/inspirit941/todo-with-cicd.git
       credentialsId: credentials
     branches:
     - name: master
