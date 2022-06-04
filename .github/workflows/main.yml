@@ -39,7 +39,9 @@ jobs:
           scm.git.userRemoteConfig.url: ${{ github.repositoryUrl }}
           scm.git.branches.name: ${{ github.ref_name }}
       - name: test scmfile.yaml
-        run: cat scmfile.yaml
+        run: |
+          cat scmfile.yaml
+          cat ../../scmfile.yaml
         
       # Runs a set of commands using the runners shell
       - name: custom runnger github action
