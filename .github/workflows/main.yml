@@ -42,7 +42,7 @@ jobs:
         run: |
           cat scmfile.yaml
           cat plugins.txt
-          cat ../../plugins.txt
+          ls
         
       # Runs a set of commands using the runners shell
       - name: custom runnger github action
