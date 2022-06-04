@@ -21,10 +21,10 @@ pipeline {
 
         stage('clone') {
             steps {
-                git url: "$SOURCE_CODE_URL",
-                    branch: "$RELEASE_BRANCH",
-                    credentialsId: "$SOURCECODE_JENKINS_CREDENTIAL_ID"
-                sh "ls -al"
+                git url: '$SOURCE_CODE_URL',
+                    branch: '$RELEASE_BRANCH',
+                    credentialsId: '$SOURCECODE_JENKINS_CREDENTIAL_ID'
+                sh 'ls -al'
             }
         }
 
