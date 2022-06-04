@@ -48,6 +48,6 @@ jobs:
       - name: custom runnger github action
         uses: inspirit941/jenkinsfile-runner-github-actions@master
         with:
-          jenkinsfile: ../../Jenkinsfile
-          plugins: ../../plugins.txt
-          scmfile: ../../scmfile.yaml
+          jenkinsfile: Jenkinsfile
+          plugins: plugins.txt
+          scmfile: scmfile.yaml
