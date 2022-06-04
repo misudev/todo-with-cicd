@@ -45,8 +45,8 @@ pipeline {
                 dir("./backend"){
                     sh "pwd"
 
-                    sh "gradlew clean"
-                    sh "gradlew bootJar"
+                    sh "./gradlew clean"
+                    sh "./gradlew bootJar"
 
                     sh "docker build -t todo/backend ."
                 }
