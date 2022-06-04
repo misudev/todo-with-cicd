@@ -12,9 +12,6 @@ pipeline {
         stage('Init') {
             steps {
                 echo 'clear'
-                sh 'docker stop $(docker ps -aq)'
-                sh 'docker rm $(docker ps -aq)'
-                deleteDir()
             }
         }
 
