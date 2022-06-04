@@ -1,4 +1,5 @@
 git:latest
 workflow-aggregator:latest
 pipeline-model-definition:latest
+credentials:latest
 nodejs:latest
