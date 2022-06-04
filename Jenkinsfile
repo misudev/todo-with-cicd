@@ -17,10 +17,17 @@ pipeline {
 
         stage('clone') {
             steps {
+                /*
                 script {
                     git url: "$SOURCE_CODE_URL",
                         branch: "$RELEASE_BRANCH",
                         credentialsId: "$SOURCECODE_JENKINS_CREDENTIAL_ID"
+                }
+                */
+                script {
+                    git url: 'https://github.com/inspirit941/todo-with-cicd.git',
+                        branch: 'master'
+                        credentialsId: 'credentials'
                 }
                 sh "ls -al"
                 echo 'clone end~~~'
