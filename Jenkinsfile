@@ -5,8 +5,8 @@ pipeline {
         timeout(time: 1, unit: 'HOURS')
     }
     environment {
-        SOURCECODE_JENKINS_CREDENTIAL_ID = 'jenking-github-wh'
-        SOURCE_CODE_URL = 'https://github.com/my-research/todo-with-cicd.git'
+        SOURCECODE_JENKINS_CREDENTIAL_ID = 'credentials'
+        SOURCE_CODE_URL = 'https://github.com/inspirit941/techworld-js-docker-demo.git'
         RELEASE_BRANCH = 'master'
     }
     stages {

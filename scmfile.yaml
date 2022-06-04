@@ -1,0 +1,13 @@
+credential:
+  usernamePassword:
+    password: secret
+    scope: GLOBAL
+    id: credentialId1
+    username: user1
+scm:
+  git:
+    userRemoteConfigs:
+    - url: https://github.com/jenkinsci/jenkinsfile-runner.git
+      credentialsId: credentials
+    branches:
+    - name: master
