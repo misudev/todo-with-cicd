@@ -4,3 +4,4 @@ pipeline-model-definition:latest
 credentials:latest
 nodejs:latest
 configuration-as-code:latest
+docker-plugin:latest
