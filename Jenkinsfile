@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         SOURCECODE_JENKINS_CREDENTIAL_ID = 'credentials'
-        SOURCE_CODE_URL = 'https://github.com/inspirit941/techworld-js-docker-demo.git'
+        SOURCE_CODE_URL = 'https://github.com/inspirit941/todo-with-cicd.git'
         RELEASE_BRANCH = 'master'
     }
     stages {
