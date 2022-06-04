@@ -1,3 +1,4 @@
 git:latest
+workflow-aggregator:latest
 pipeline-model-definition:latest
 nodejs:latest
