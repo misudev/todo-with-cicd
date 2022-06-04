@@ -1,0 +1,3 @@
+git:latest
+pipeline-model-definition:latest
+nodejs:latest
