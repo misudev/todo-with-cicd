@@ -1,3 +1,4 @@
 git:latest
+git-client:latest
 pipeline-model-definition:latest
 nodejs:latest
