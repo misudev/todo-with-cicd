@@ -3,3 +3,4 @@ workflow-aggregator:latest
 pipeline-model-definition:latest
 credentials:latest
 nodejs:latest
+configuration-as-code:latest
