@@ -12,6 +12,8 @@ pipeline {
         stage('Init') {
             steps {
                 echo 'clear'
+                sh 'env'
+                sh 'git submodule update --init'
             }
         }
 
