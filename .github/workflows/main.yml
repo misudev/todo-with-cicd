@@ -41,7 +41,8 @@ jobs:
       - name: test scmfile.yaml
         run: |
           cat scmfile.yaml
-          cat ../../scmfile.yaml
+          cat plugins.txt
+          cat ../../plugins.txt
         
       # Runs a set of commands using the runners shell
       - name: custom runnger github action
