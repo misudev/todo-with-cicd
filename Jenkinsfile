@@ -14,7 +14,7 @@ pipeline {
                 echo 'clear'
 //                 sh 'env'
                 sh "ls -al"
-                sh 'git submodule update --init'
+                git 'submodule update --init'
                 sh 'echo git branch'
             }
         }
