@@ -14,8 +14,7 @@ pipeline {
                 echo 'clear'
 //                 sh 'env'
                 sh "ls -al"
-                sh 'git submodule update --init'
-                sh 'echo git branch'
+                echo 'git branch'
             }
         }
 
@@ -28,10 +27,9 @@ pipeline {
                         credentialsId: "$SOURCECODE_JENKINS_CREDENTIAL_ID"
                 }
                 */
-                sh "git url: 'https://github.com/inspirit941/todo-with-cicd.git', branch: 'master', credentialsId: 'credentials'"
-                
+                git url: 'https://github.com/inspirit941/todo-with-cicd.git', branch: 'master', credentialsId: 'credentials'                
                 sh "ls -al"
-                echo 'clone end~~~'
+
             }
         }
 
