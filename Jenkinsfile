@@ -23,6 +23,7 @@ pipeline {
                         credentialsId: "$SOURCECODE_JENKINS_CREDENTIAL_ID"
                 }
                 sh "ls -al"
+                echo 'clone end~~~'
             }
         }
 
@@ -46,6 +47,7 @@ pipeline {
             }
         }
 
+/*
         stage('deploy') {
             steps {
                 sh '''
@@ -56,4 +58,5 @@ pipeline {
             }
         }
     }
+*/
 }
