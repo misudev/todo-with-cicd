@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     options {
         timeout(time: 1, unit: 'HOURS')
     }
@@ -9,7 +9,8 @@ pipeline {
         RELEASE_BRANCH = 'master'
     }
     stages {
-        stage('Init') {
+        /*
+        stage('init') {
             steps {
                 echo 'clear'
                 sh 'env'
@@ -17,6 +18,7 @@ pipeline {
                 sh 'echo git branch'
             }
         }
+        */
 
         stage('clone') {
             steps {
