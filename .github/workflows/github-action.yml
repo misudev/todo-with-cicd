@@ -1,0 +1,73 @@
+name: github-action.yaml file Created by m2ga
+env:
+  SOURCECODE_JENKINS_CREDENTIAL_ID: credentials
+  SOURCE_CODE_URL: https://github.com/inspirit941/todo-with-cicd.git
+  RELEASE_BRANCH: master
+
+# setting github branch triggers: default-branch.
+# for customizing: please check https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  # The Jenkinsfile contains the options directive for its pipeline. This is not converted.
+  init:
+    runs-on: ubuntu-latest
+    steps: 
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: step1
+        run: echo clear
+      - name: step2
+        run: ls -al
+      - name: step3
+        run: echo git branch
+  clone:
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [init]
+    steps: 
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: step1
+        # The Jenkins Pipeline step git cannot be translated directly.
+        # You may want to consider adding a shell script to your repository that replicates its behavior.
+        # Original step from Jenkinsfile:
+        # git(url: "https://github.com/inspirit941/todo-with-cicd.git", branch: "master", credentialsId: "credentials")
+        run: echo 'Invalid step git, failing' && exit 1
+      - name: step2
+        run: ls -al
+  frontend_dockerizing:
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [init, clone]
+    steps: 
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: step1
+        run: docker build -t todo/frontend ./frontend
+  backend_dockerizing:
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [init, clone, frontend_dockerizing]
+    steps: 
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: step1
+        run: pwd
+      - name: step2
+        run: pwd
+        working-directory: ./backend
+      - name: step3
+        run: ./gradlew clean
+        working-directory: ./backend
+      - name: step4
+        run: ./gradlew bootJar
+        working-directory: ./backend
+      - name: step5
+        run: docker build -t todo/backend .
+        working-directory: ./backend
