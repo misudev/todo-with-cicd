@@ -1,4 +1,4 @@
-# Todo List, 근데 이제 CICD를 곁들인
+# Example Project of Convert Jenkins Pipeline to Github Action.yaml
 
 - React
 - Spring Boot
