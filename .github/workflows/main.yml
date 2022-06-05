@@ -46,7 +46,7 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: custom runnger github action
-        uses: inspirit941/jenkinsfile-runner-github-actions/jenkinsfile-runner-prepackaged@master
+        uses: inspirit941/jenkinsfile-runner-github-actions@master
         with:
           jenkinsfile: Jenkinsfile
           plugins: plugins.txt
