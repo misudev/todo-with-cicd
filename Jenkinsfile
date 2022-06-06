@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo 'clear'
 //                 sh 'env'
+            
                 sh "ls -al"
                 echo 'git branch'
             }
